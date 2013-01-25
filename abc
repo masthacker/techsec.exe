@@ -1,0 +1,113 @@
+<?php
+  session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"><table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center"><?php include("header.php"); ?></td>
+      </tr>
+      <tr>
+        <td align="center">
+		<?php 
+			if(!isset($_SESSION["user"]))
+			{
+				include("menu.php"); 
+			}
+			else
+			{
+				include("aftermenu.php");
+			}
+		?>
+		</td>
+      </tr>
+      <tr>
+        <td align="center"><table width="960" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="210" align="left" valign="top"><table width="210" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" valign="top"><?php include("categorylist.php"); ?></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top"><?php include("usermenu.php"); ?></td>
+              </tr>
+            </table></td>
+            <td align="center" valign="top" style="padding-top:25px;"><table width="450" border="1" cellpadding="5" cellspacing="2" bordercolor="#999966">
+              <tr>
+                <td align="center" valign="top" class="title">Contact Us </td>
+              </tr>
+              <tr>
+                <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="41%" align="left" valign="top"><img src="image/contactTheme.jpg" width="170" height="150" /></td>
+                    <td width="59%" align="center" valign="top"><table width="100%" border="0" cellspacing="2" cellpadding="3">
+                      <tr>
+                        <td colspan="2" align="right" valign="top" class="contact">Online Softwares Pvt. Ltd. </td>
+                        </tr>
+                      <tr>
+                        <td width="32%" align="left" valign="top" class="cont2">Address : </td>
+                        <td width="68%" align="left" valign="top" class="cont1">A-153 MAHESH NAGAR</td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">&nbsp;</td>
+                        <td align="left" valign="top" class="cont1">TONK PHATAK, Jaipur </td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">&nbsp;</td>
+                        <td align="left" valign="top" class="cont1">Rajasthan (India) </td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">Mobile : </td>
+                        <td align="left" valign="top" class="cont1">+91 - 9252665533</td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">Fax : </td>
+                        <td align="left" valign="top" class="cont1">+91 - 1412220001</td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">E-Mail ID </td>
+                        <td align="left" valign="top" class="cont1">info@onlinesoftwares.com</td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" class="cont2">&nbsp;</td>
+                        <td align="left" valign="top" class="cont1">hr@onlinesoftwares.com</td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+            <td width="260" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center" valign="top"><?php include("latestsoft.php"); ?></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><?php include("footer.php"); ?></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
